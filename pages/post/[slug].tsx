@@ -6,6 +6,7 @@ import PortableText from "react-portable-text";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 
+
 interface IFormInput {
   _id: string;
   name: string;
@@ -16,7 +17,6 @@ interface IFormInput {
 interface Props {
   post: Post;
 }
-
 function Post({ post }: Props) {
   const [submitted, setSubmitted] = useState(false);
 
@@ -42,7 +42,7 @@ function Post({ post }: Props) {
         setSubmitted(false);
       });
   };
-
+  
   return (
     <main>
       <Header />
@@ -252,4 +252,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
     revalidate: 60, // after 60 seconds, itll update the old cached version
   };
+
+  
 };

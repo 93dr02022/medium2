@@ -1,6 +1,9 @@
 import Link from "next/link";
+import Login from "../components/Login";
+import { useMoralis } from "react-moralis";
 
 function Header() {
+  const { isAuthenticated, logout } = useMoralis();
   return (
     <header className="flex justify-between p-5 max-w-7xl mx-auto">
       <div className="flex items-center space-x-5">
@@ -20,12 +23,16 @@ function Header() {
         </div>
       </div>
 
-      <div className="flex items-center space-x-5 text-green-600">
-        <h3>Sign In</h3>
-        <h3 className="border px-4 py-1 rounded-full border-green-600">
-          Get Started
-        </h3>
-      </div>
+      <div>
+      {isAuthenticated ? (
+        <p>
+          You are logged in! 
+          <button onClick={logout}>ㅤSign Out</button>
+          </p>
+      ) : (
+        <Login />
+      )}
+    </div>
     </header>
   );
 }

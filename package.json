@@ -7,12 +7,18 @@
   },
   "dependencies": {
     "@sanity/client": "^2.23.2",
+    "@web3-react/core": "^6.1.9",
+    "@web3-react/injected-connector": "^6.0.7",
+    "magic-sdk": "^8.1.1",
+    "moralis": "^1.8.0",
     "next": "latest",
     "next-sanity": "^0.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.32.1",
-    "react-portable-text": "^0.4.0"
+    "react-moralis": "^1.4.0",
+    "react-portable-text": "^0.4.0",
+    "web3": "^1.7.3"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
